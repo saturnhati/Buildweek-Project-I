@@ -32,7 +32,7 @@ header {
     position: relative;
 }
 
-#hero-image:before {
+#hero-image::before {
     content: "";
     position: absolute;
     right: 0;
