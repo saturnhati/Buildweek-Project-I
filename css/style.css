@@ -1,3 +1,4 @@
+/*INFO GENERALI*/
 *,
 *::after,
 *::before {
@@ -20,8 +21,11 @@ body {
 	background-color: #fff;
 }
 
+/*MENU PART*/
+
 #menu{
 	padding: 70px 0;
+	margin: 40px 0;
 }
 
 #contenitorofmenu{
@@ -103,14 +107,70 @@ h2 b {
 	border: 1px solid #FF530A;
 	padding: 30px 100px;
 	float: right;
-	margin: 20px;
+	margin-right: 20px;
 	text-decoration: none;
 	color: #FF530A;
 	font-size: 1.4rem;
+	margin-bottom: 0;
 }
 
 #Moreinfo:hover{
 	transition: 2s;
 	background-color: #FF530A;
 	color: #fff;
+}
+
+
+/*NEWSLETTER PART*/
+
+#newsletter{
+	margin-top: 50px;
+	padding: 100px 0;
+	text-align: center;
+	position: relative;
+	background: url("../assets/images/subscribe-bg.jpg");
+}
+
+#contenitorofnews{
+	padding: 0 15px;
+}
+
+#contenitorofnews h2{
+	font-size: 2.5rem;
+	color: #fff;
+	padding: 40px 0;
+}
+
+#contenitorofnews h2 span{
+	color: #FF530A;
+}
+
+#contenitorofnews p{
+	color: #fff;
+	font-size: 1.3rem;
+}
+
+#tableofemail{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+}
+
+#tableofemail input{
+	padding: 15px 20px 15px 20px;
+	width: 300px;
+	border: 0px;
+}
+
+#tableofemail a{
+	text-decoration: none;
+	padding: 15px 30px 15px 30px;
+	background-color: #7EC3BB;
+	color: #fff;
+}
+
+#tableofemail a:hover{
+	transition: 1s;
+	background-color: #69A8A1;
 }
