@@ -1,3 +1,4 @@
+/*INFO GENERALI*/
 *,
 *::after,
 *::before {
@@ -246,4 +247,166 @@ p i {
 
 #blog__button {
 	grid-area: 4 / 2 / 5 / 3;
+}
+/*MENU PART*/
+
+#menu{
+	padding: 70px 0;
+	margin: 40px 0;
+}
+
+#lain{
+	border: 0.5px solid #FF530A;
+	width: 150px;
+	margin: 0 auto;
+	
+}
+
+#contenitorofmenu{
+	margin: 0 20px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+#contenitorofmenu h2{
+	padding: 15px;
+	margin: 20px;
+	font-size: 2.5rem;
+}
+
+h2 b {
+	color: #FF530A;
+}
+
+#contenitorofmenu p{
+	padding: 30px 50px 0px 50px;
+}
+
+
+#list-food{
+	padding-top: 50px;
+	text-align: left;
+}
+
+#list-food h3{
+	font-size: 1.5rem;
+}
+
+#list-food h3 span{
+	color: #FF530A;
+}
+
+#food{
+	padding-top: 40px;
+	line-height: 1.4;
+	list-style: none;
+}
+
+#food li{
+	font-size: 1.5rem;
+	padding: 20px 0px;
+	width: 100%;
+}
+
+.titleofelement{
+	position: relative;
+}
+
+.border-bottom{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 1px;
+	border: 1px dotted #C9C9C9;
+	margin-top: 30px;
+}
+
+#food li h3{
+	display: inline-block;
+	position: relative;
+}
+
+#food li span{
+	float: right;
+	color: #FF530A;
+}
+
+#food li p{
+	padding: 12px 0 0px;
+	font-size: 0.9rem;
+}
+
+#Moreinfo{
+	transition: infinite;
+	border: 1px solid #FF530A;
+	padding: 30px 100px;
+	float: right;
+	margin-right: 20px;
+	text-decoration: none;
+	color: #FF530A;
+	font-size: 1.4rem;
+	margin-bottom: 0;
+}
+
+#Moreinfo:hover{
+	transition: 2s;
+	background-color: #FF530A;
+	color: #fff;
+}
+
+
+/*NEWSLETTER PART*/
+
+#newsletter{
+	margin-top: 50px;
+	padding: 100px 0;
+	text-align: center;
+	position: relative;
+	background: url("../assets/images/subscribe-bg.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+#contenitorofnews{
+	padding: 0 15px;
+}
+
+#contenitorofnews h2{
+	font-size: 2.5rem;
+	color: #fff;
+	padding: 40px 0;
+}
+
+#contenitorofnews h2 span{
+	color: #FF530A;
+}
+
+#contenitorofnews p{
+	color: #fff;
+	font-size: 1.3rem;
+}
+
+#tableofemail{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+}
+
+#tableofemail input{
+	padding: 15px 20px 15px 20px;
+	width: 300px;
+	border: 0px;
+}
+
+#tableofemail a{
+	text-decoration: none;
+	padding: 15px 30px 15px 30px;
+	background-color: #7EC3BB;
+	color: #fff;
+}
+
+#tableofemail a:hover{
+	transition: 1s;
+	background-color: #69A8A1;
 }
