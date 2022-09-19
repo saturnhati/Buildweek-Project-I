@@ -24,7 +24,12 @@ body {
 
 #blog {
 	padding: 3rem 0;
-	background-image: url("../assets/images/blog/blog-bg.jpg");
+	background-image: linear-gradient(
+			to bottom,
+			rgba(245, 246, 252, 0.52),
+			rgba(117, 19, 93, 0.73)
+		),
+		url("../assets/images/blog/blog-bg.jpg");
 	background-size: cover;
 	background-position: center;
 	width: 100%;
@@ -84,4 +89,38 @@ body {
 
 #blog .box p {
 	color: #959595;
+}
+
+.blog__img--wrap {
+	overflow: hidden;
+}
+
+.blog__img--animation:hover {
+	animation-name: img-trasform;
+
+	animation-duration: 1s;
+	animation-timing-function: linear;
+}
+
+@keyframes img-trasform {
+	0% {
+		transform: scale(1.2, 1.2);
+	}
+
+	50% {
+		transform: scale(1.2, 1.2);
+		transform: rotate(2deg);
+	}
+	100% {
+		transform: scale(1.2, 1.2);
+		transform: rotate(5deg);
+	}
+}
+
+.blog__border--grey {
+	width: 30%;
+	border-bottom: 0.5px solid #959595;
+	margin: 0.6rem;
+	text-align: center;
+	margin: 1rem auto;
 }
