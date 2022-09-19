@@ -28,6 +28,13 @@ body {
 	margin: 40px 0;
 }
 
+#lain{
+	border: 0.5px solid #FF530A;
+	width: 150px;
+	margin: 0 auto;
+	
+}
+
 #contenitorofmenu{
 	margin: 0 20px;
 	padding: 0 20px;
@@ -129,6 +136,8 @@ h2 b {
 	text-align: center;
 	position: relative;
 	background: url("../assets/images/subscribe-bg.jpg");
+	background-position: center;
+	background-size: cover;
 }
 
 #contenitorofnews{
