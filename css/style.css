@@ -110,3 +110,7 @@ body {
 	text-align: center;
 	margin: 1rem auto;
 }
+
+#blog__button {
+	grid-area: 4 / 2 / 5 / 3;
+}
