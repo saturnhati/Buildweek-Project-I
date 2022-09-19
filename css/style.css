@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: myfont;
+	src: url(../assets/fonts/ufonts.com_tw-cen-mt.ttf);
+}
+
+body {
+	font-family: myfont;
+	font-size: 1rem;
+
+	width: 100vw;
+	height: 100vh;
+
+	color: #333;
+	background-color: #fff;
+}
