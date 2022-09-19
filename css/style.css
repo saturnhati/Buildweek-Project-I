@@ -95,26 +95,12 @@ body {
 	overflow: hidden;
 }
 
-.blog__img--animation:hover {
-	animation-name: img-trasform;
-
-	animation-duration: 1s;
-	animation-timing-function: linear;
+.blog__img--animation {
+	transition: 1s;
 }
 
-@keyframes img-trasform {
-	0% {
-		transform: scale(1.2, 1.2);
-	}
-
-	50% {
-		transform: scale(1.2, 1.2);
-		transform: rotate(2deg);
-	}
-	100% {
-		transform: scale(1.2, 1.2);
-		transform: rotate(5deg);
-	}
+.blog__img--animation:hover {
+	transform: scale(1.2) rotate(10deg);
 }
 
 .blog__border--grey {
