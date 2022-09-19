@@ -20,7 +20,7 @@ body {
 	background-color: #fff;
 }
 
-/* SEZIONE ABOUT-US */
+/* ABOUT-US SECTION */
 #about-us {
 	padding: 2.5em 0;
 	text-align: center;
@@ -55,5 +55,7 @@ body {
 #about-us>*:not(#about-us p) {
 	margin-bottom: 2.2rem;
 }
+
+/* CONTACT-US SECTION */
 
 
