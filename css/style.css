@@ -63,8 +63,25 @@ header::before {
 }
 
 /* SLIDER */
-
+#containerofslider{
+	padding: 70px;
+}
+#titleofslider{
+	display: flex;
+	justify-content: space-between;
+}
 #titleofslider h2{
+	font-size: 1.5rem;
+}
+
+#titleofslider span{
+	color: #FF4F02;
+}
+
+#scroll-row{
+	background-color: #fff;
+	color: #FF530A;
+	border: 0;
 	font-size: 1.5rem;
 }
 
