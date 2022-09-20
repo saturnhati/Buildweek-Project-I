@@ -661,14 +661,47 @@ p i {
 	color: #474747;
 }
 
-/*media query of menu*/
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 1200px) {
-	#contenitorofmenu {
+    /* header */
+    #logo{
+        width: 150px;
+    }
+
+    /* menu */
+    #contenitorofmenu {
 		margin: 0 50px;
 	}
 }
-@media screen and (max-width: 768px) {
-	.border-bottom {
+
+/* Hamburger Menu */
+@media screen and (min-width:768px){
+    #hamburger_menu{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* header */
+    .header__nav {
+        display: none;
+    }
+    #hamburger {
+        display: inline-block;
+    }
+
+    /* about us */
+    #about-us h2 {
+		font-size: 1.5rem;
+	}
+
+	#about-us .orange_text {
+		font-size: 1.8rem;
+	}
+
+    /* menu */
+    .border-bottom {
 		display: none;
 	}
 	#food li span {
@@ -677,10 +710,9 @@ p i {
 		padding-top: 10px;
 		text-align: left;
 	}
-}
-/*media query of newsletter*/
-@media screen and (max-width: 768px) {
-	#tableofemail {
+
+    /* newsletter */
+    #tableofemail {
 		border-collapse: separate;
 		display: table;
 		width: 100%;
@@ -694,41 +726,9 @@ p i {
 		margin-top: 20px;
 		text-align: left;
 	}
-}
 
-/* media queries of header and footer */
-
-@media screen and (max-width:1200px){
-    #logo{
-        width: 150px;
-    }
-}
-
-@media screen and (max-width:768px){
-    .header__nav {
-        display: none;
-    }
-    #hamburger {
-        display: inline-block;
-    }
-    .footer__content {
-        flex-direction: column;
-    } 
-    .footer__contact, .footer__latest, .footer_photo-social {
-        margin: 4vh 0;
-    }
-@media screen and (max-width: 767px){
-	#about-us h2 {
-		font-size: 1.5rem;
-	}
-
-	#about-us .orange_text {
-		font-size: 1.8rem;
-	}
-	
-	
-	
-	#contact-us h2{
+    /* contact us */
+    #contact-us h2{
 		font-size: 1.5rem;
 		margin-bottom: 2rem;
 	}
@@ -744,8 +744,17 @@ p i {
 	#contact-us__btn {
 		width: 100%;
 	}
+
+    /* footer */
+    .footer__content {
+        flex-direction: column;
+    } 
+    .footer__contact, .footer__latest, .footer_photo-social {
+        margin: 4vh 0;
+    }
 }
 
+/* CONTACT US - FORM */
 @media screen and (min-width: 768px) and (max-width: 991px){
 	#form__btn{
 		text-align: center;
@@ -761,6 +770,7 @@ p i {
 
 }
 
+/* CONTACT US - FORM */
 @media screen and (min-width:992px) and (max-width: 1199px){
 	#contact-us__formContainer{
 		width: 940px;
@@ -768,14 +778,9 @@ p i {
 	}
 }
 
+/* CONTACT US - FORM */
 @media screen and (min-width: 1200px){
 	#contact-us__formContainer{
 		max-width: 1140px;
 	}
-}
-
-@media screen and (min-width:768px){
-    #hamburger_menu{
-        visibility: hidden;
-    }
 }
