@@ -20,7 +20,16 @@ document.addEventListener('scroll', function () {
 })
 
 // hamburger menu
+let menuOpen = false
 function burgerMenu() {
+    let width = screen.width
     let burger = document.getElementById('hamburger_menu')
-    burger.style.display = 'block'
+    if (menuOpen == false) {
+        menuOpen = true
+        burger.style.display = 'block'
+    }
+    else {
+        menuOpen = false
+        burger.style.display = 'none'
+    }
 }

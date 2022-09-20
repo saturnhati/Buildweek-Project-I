@@ -83,6 +83,9 @@ header::before {
     display: block;
     padding: 10px 0;
 }
+#hamburger_menu a:hover {
+    border-bottom: 2px solid #FF4F02;
+}
 
 /* SLIDER */
 .slider {
@@ -487,6 +490,11 @@ p i {
     }
     #hamburger {
         display: inline-block;
-
-} 
+    }
+    .footer__content {
+        flex-direction: column;
+    } 
+    .footer__contact, .footer__latest, .footer_photo-social {
+        margin: 4vh 0;
+    }
 }
