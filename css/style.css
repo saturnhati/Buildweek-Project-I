@@ -166,6 +166,7 @@ header::before {
 	grid-template-columns: 1fr 1fr;
 	column-gap: 0;
 	align-items: center;
+	position: relative;
 }
 #blog .box h3 {
 	font-size: 1.25rem;
@@ -179,6 +180,18 @@ header::before {
 }
 .blog__img--wrap {
 	overflow: hidden;
+}
+
+.blog__img--wrap::after {
+	content: "";
+	position: absolute;
+	right: 47.2%;
+	top: 30%;
+	width: 30px;
+	height: 30px;
+	margin-top: 0px;
+	background: #fff;
+	transform: rotate(45deg);
 }
 .blog__img--animation {
 	transition: 1s;
