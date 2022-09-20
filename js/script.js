@@ -1,5 +1,6 @@
-// HEADER - position fixed
+// HEADER
 
+// position fixed nav bar
 let colla = document.querySelector('#colla')
 
 document.addEventListener('scroll', function () {
@@ -17,3 +18,9 @@ document.addEventListener('scroll', function () {
         colla.style.top = 'unset';
     }
 })
+
+// hamburger menu
+function burgerMenu() {
+    let burger = document.getElementById('hamburger_menu')
+    burger.style.display = 'block'
+}
