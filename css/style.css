@@ -275,8 +275,11 @@ header::before {
 
 	#blog__button {
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: row;
 		width: 100%;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2rem;
 	}
 }
 
