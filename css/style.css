@@ -124,13 +124,14 @@ header::before {
 }
 /* ABOUT-US SECTION */
 #about-us {
-	padding: 2.5em 0;
+	padding: 7em 0;
 	text-align: center;
 	background-color: #f6f6f6;
 }
 #about-us p {
 	display: inline-block;
-	width: 80%;
+	width: 90%;
+	max-width: 1140px;
 	color: #959595;
 	line-height: 1.5em;
 }
@@ -572,7 +573,7 @@ h2 b {
 	color: #ff530a;
 }
 #contact-us__formContainer {
-	max-width: 90%;
+	width: 90%;
 	margin-inline: auto;
 	display: flex;
 	flex-direction: column;
@@ -716,6 +717,61 @@ p i {
     .footer__contact, .footer__latest, .footer_photo-social {
         margin: 4vh 0;
     }
+@media screen and (max-width: 767px){
+	#about-us h2 {
+		font-size: 1.5rem;
+	}
+
+	#about-us .orange_text {
+		font-size: 1.8rem;
+	}
+	
+	
+	
+	#contact-us h2{
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	#contact-us .orange_text {
+		font-size: 1.8rem;
+	}
+
+	#contact-us p {
+		font-size: 20px;
+	}
+
+	#contact-us__btn {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+	#form__btn{
+		text-align: center;
+	}
+
+	#contact-us__btn {
+		width: 512px;
+	}
+
+	#contact-us__formContainer {
+		max-width: 720px;
+	}
+
+}
+
+@media screen and (min-width:992px) and (max-width: 1199px){
+	#contact-us__formContainer{
+		width: 940px;
+
+	}
+}
+
+@media screen and (min-width: 1200px){
+	#contact-us__formContainer{
+		max-width: 1140px;
+	}
 }
 
 @media screen and (min-width:768px){
