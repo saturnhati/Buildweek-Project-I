@@ -20,13 +20,25 @@ document.addEventListener('scroll', function () {
 })
 
 // hamburger menu
+let width = window.innerWidth
 let menuOpen = false
+
+// addEventListener('resize', (event) => {});
+
+// onresize = (event) => {};
+
+
 function burgerMenu() {
-    let width = screen.width
     let burger = document.getElementById('hamburger_menu')
-    if (menuOpen == false) {
-        menuOpen = true
-        burger.style.display = 'block'
+    if (width < 768) {
+        if (menuOpen == false) {
+            menuOpen = true
+            burger.style.display = 'block'
+        }
+        else {
+            menuOpen = false
+            burger.style.display = 'none'
+        }
     }
     else {
         menuOpen = false

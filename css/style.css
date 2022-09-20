@@ -36,7 +36,7 @@ header::before {
 	bottom: 0;
 	right: 0;
 	width: 100%;
-	height: 99.4%;
+	height: 99.2%;
 	background: url(../assets/images/overlay-pattern.png) #000000;
 	opacity: 0.3;
 	z-index: 1;
@@ -715,5 +715,11 @@ p i {
     } 
     .footer__contact, .footer__latest, .footer_photo-social {
         margin: 4vh 0;
+    }
+}
+
+@media screen and (min-width:768px){
+    #hamburger_menu{
+        visibility: hidden;
     }
 }
