@@ -232,8 +232,8 @@ header::before {
 	background-color: transparent;
 }
 
-/* 768px - 991px */
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+/* 768px - 992px */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
 	#blog__box-img {
 		display: flex;
 		flex-direction: column;
