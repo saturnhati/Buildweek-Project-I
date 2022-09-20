@@ -61,8 +61,10 @@ header::before {
 	font-size: 1rem;
 	padding: 0 12px;
 }
-
 /* SLIDER */
+#featured-slider{
+	padding: 0 auto;
+}
 #containerofslider{
 	padding: 70px;
 }
@@ -73,54 +75,19 @@ header::before {
 #titleofslider h2{
 	font-size: 1.5rem;
 }
-
 #titleofslider span{
 	color: #FF4F02;
 }
-
 #scroll-row{
 	background-color: #fff;
 	color: #FF530A;
 	border: 0;
 	font-size: 1.5rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.item{
+	width: 300px;
+	margin: 30px 100px;
+}
 /* ABOUT-US SECTION */
 #about-us {
 	padding: 2.5em 0;
