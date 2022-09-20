@@ -92,8 +92,8 @@ header::before {
 
 /* SLIDER */
 #featured-slider {
-	padding: 0 auto;
-    margin-top: 4vh;
+	width: 80%;
+	margin: 4vh auto;
 }
 #containerofslider {
 	padding: 70px;
@@ -101,6 +101,7 @@ header::before {
 #titleofslider {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 2vh;
 }
 #titleofslider h2 {
 	font-size: 1.5rem;
@@ -113,10 +114,6 @@ header::before {
 	color: #ff530a;
 	border: 0;
 	font-size: 1.5rem;
-}
-.item {
-	width: 300px;
-	margin: 30px 100px;
 }
 .slider {
 	text-align: center;
