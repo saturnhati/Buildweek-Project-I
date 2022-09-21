@@ -1,3 +1,5 @@
+//impostazioni generali
+
 // HEADER
 let menuOpen = false
 

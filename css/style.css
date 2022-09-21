@@ -377,7 +377,7 @@ header::before {
 	margin: 40px 0;
 }
 #lain {
-	border: 0.5px solid #ff530a;
+	border-bottom: 1px solid #C8C1B3;
 	width: 150px;
 	margin: 0 auto;
 }
@@ -396,6 +396,7 @@ h2 b {
 }
 #contenitorofmenu p {
 	padding: 30px 50px 0px 50px;
+	color: #A5A5A5;
 }
 #list-food {
 	padding-top: 50px;
@@ -428,7 +429,7 @@ h2 b {
 }
 .border-bottom {
 	position: absolute;
-	top: 0;
+	top: -15%;
 	width: 100%;
 	height: 1px;
 	border: 1px dotted #c9c9c9;
@@ -456,7 +457,7 @@ h2 b {
 	color: #ff530a;
 	font-size: 1.4rem;
 	margin-bottom: 0;
-	transition: 2s;
+	transition: 1s;
 }
 #Moreinfo:hover {
 	background-color: #ff530a;
@@ -502,7 +503,7 @@ h2 b {
 	color: #ff5333;
 }
 #lain-color {
-	border: 0.5px solid #fff;
+	border-bottom: 1px solid #fff;
 	width: 150px;
 	margin: 0 auto;
 	opacity: 0.5;
@@ -520,14 +521,18 @@ h2 b {
 }
 #tableofemail input {
 	padding: 15px 20px 15px 20px;
-	width: 300px;
-	border: 0px;
+	width: 450px;
+	border: none;
+	height: 60px;
+	border-radius: 0px;
 }
 #tableofemail a {
 	text-decoration: none;
-	padding: 15px 30px 15px 30px;
+	padding: 21px 40px 21px 40px;
 	background-color: #7ec3bb;
 	color: #fff;
+	letter-spacing: 2px;
+	
 }
 #tableofemail a:hover {
 	transition: 1s;
