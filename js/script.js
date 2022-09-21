@@ -51,70 +51,76 @@ function burgerMenu() {
 
 // HEADER NAV MENU ON SCROLL
 document.addEventListener('scroll', function () {
-    let top = window.pageYOffset
-    let homeH = document.querySelector('header').clientHeight
-    let home = document.getElementById('home1')
-    let aboutUsH = document.querySelector('#about-us').clientHeight
-    let aboutUs = document.getElementById('aboutus1')
-    let blogH = document.querySelector('#blog').clientHeight
-    let blog = document.getElementById('blog1')
-    let menuH = document.querySelector('#menu1').clientHeight
-    let menu = document.getElementById('menu')
-    let newsH = document.querySelector('#newsletter1').clientHeight
-    let news = document.getElementById('newsletter')
-    let contactsH = document.querySelector('#contacts1').clientHeight
-    let contacts = document.getElementById('contact-us')
-    if (top - homeH + 100 < 0) {
-        home.classList.add('scroll_underline')
-        console.log('on')
+    let navMenu = [
+        document.querySelector('#home1'),
+        document.querySelector('#aboutus1'),
+        document.querySelector('#blog1'),
+        document.querySelector('#menu1'),
+        document.querySelector('#newsletter1'),
+        document.querySelector('#contacts1')]
+    let element = [
+        document.querySelector('header'),
+        document.querySelector('#about-us'),
+        document.querySelector('#blog'),
+        document.querySelector('#menu'),
+        document.querySelector('#newsletter'),
+        document.querySelector('#contact-us')]
+    let pageHeight = window.innerHeight
+    let distanceFromTop0 = element[0].getBoundingClientRect().top
+    let distanceFromTop1 = element[1].getBoundingClientRect().top
+    let distanceFromTop2 = element[2].getBoundingClientRect().top
+    let distanceFromTop3 = element[3].getBoundingClientRect().top
+    let distanceFromTop4 = element[4].getBoundingClientRect().top
+    let distanceFromTop5 = element[5].getBoundingClientRect().top
+    let elementHeight0 = element[0].getBoundingClientRect().bottom - distanceFromTop0
+    let elementHeight1 = element[1].getBoundingClientRect().bottom - distanceFromTop1
+    let elementHeight2 = element[2].getBoundingClientRect().bottom - distanceFromTop2
+    let elementHeight3 = element[3].getBoundingClientRect().bottom - distanceFromTop3
+    let elementHeight4 = element[4].getBoundingClientRect().bottom - distanceFromTop4
+    let elementHeight5 = element[5].getBoundingClientRect().bottom - distanceFromTop5
+    console.log(distanceFromTop0)
+    // HOME BUTTON
+    if (distanceFromTop0 == 0 || distanceFromTop0 > (elementHeight0 * -1)) {
+        navMenu[0].classList.add('scroll_underline')
     }
     else {
-        home.classList.remove('scroll_underline')
-        console.log('off')
-
-        if (top - aboutUsH + 100 < 0) {
-            aboutUs.classList.add('scroll_underline')
-            console.log('on1')
-        }
-        else {
-            aboutUs.classList.remove('scroll_underline')
-            console.log('off1')
-
-            if (top - blogH + 100 < 0) {
-                blog.classList.add('scroll_underline')
-                console.log('on2')
-            }
-            else {
-                blog.classList.remove('scroll_underline')
-                console.log('off2')
-
-                if (top - menuH + 100 < 0) {
-                    menu.classList.add('scroll_underline')
-                    console.log('on3')
-                }
-                else {
-                    menu.classList.remove('scroll_underline')
-                    console.log('off3')
-
-                    if (top - newsH + 100 < 0) {
-                        news.classList.add('scroll_underline')
-                        console.log('on4')
-                    }
-                    else {
-                        news.classList.remove('scroll_underline')
-                        console.log('off4')
-
-                        if (top - contactsH + 100 < 0) {
-                            contacts.classList.add('scroll_underline')
-                            console.log('on5')
-                        }
-                        else {
-                            contacts.classList.remove('scroll_underline')
-                            console.log('off5')
-                        }
-                    }
-                }
-            }
-        }
+        navMenu[0].classList.remove('scroll_underline')
+    }
+    // ABOUT US BUTTON
+    if (distanceFromTop1 < (pageHeight / 2) && distanceFromTop1 > (elementHeight1 * -1)) {
+        navMenu[1].classList.add('scroll_underline')
+    }
+    else {
+        navMenu[1].classList.remove('scroll_underline')
+    }
+    // BLOG BUTTON
+    if (distanceFromTop2 < (pageHeight / 2) && distanceFromTop2 > (elementHeight2 * -1)) {
+        navMenu[2].classList.add('scroll_underline')
+    }
+    else {
+        navMenu[2].classList.remove('scroll_underline')
+    }
+    // MENU BUTTON
+    if (distanceFromTop3 < (pageHeight / 2) && distanceFromTop3 > (elementHeight3 * -1)) {
+        navMenu[3].classList.add('scroll_underline')
+    }
+    else {
+        navMenu[3].classList.remove('scroll_underline')
+    }
+    // NEWS BUTTON
+    if (distanceFromTop4 < (pageHeight / 2) && distanceFromTop4 > (elementHeight4 * -1)) {
+        navMenu[4].classList.add('scroll_underline')
+    }
+    else {
+        navMenu[4].classList.remove('scroll_underline')
+    }
+    // CONTACTS BUTTON
+    if (distanceFromTop5 < (pageHeight / 2) && distanceFromTop5 > (elementHeight5 * -1)) {
+        navMenu[5].classList.add('scroll_underline')
+    }
+    else {
+        navMenu[5].classList.remove('scroll_underline')
     }
 })
+
+
