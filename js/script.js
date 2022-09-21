@@ -77,7 +77,6 @@ document.addEventListener('scroll', function () {
     let elementHeight3 = document.querySelector('#menu').getBoundingClientRect().bottom - distanceFromTop3
     let elementHeight4 = document.querySelector('#newsletter').getBoundingClientRect().bottom - distanceFromTop4
     let elementHeight5 = document.querySelector('#contact-us').getBoundingClientRect().bottom - distanceFromTop5
-    console.log(distanceFromTop0)
     // HOME BUTTON
     if (distanceFromTop0 == 0 || distanceFromTop0 > (elementHeight0 * -1)) {
         navMenu[0].classList.add('scroll_underline')
