@@ -28,19 +28,11 @@ document.addEventListener('scroll', function () {
 })
 
 // hamburger menu
-let width = window.innerWidth
-
 function burgerMenu() {
     let burger = document.getElementById('hamburger_menu')
-    if (width < 768) {
-        if (menuOpen == false) {
-            menuOpen = true
-            burger.style.display = 'block'
-        }
-        else {
-            menuOpen = false
-            burger.style.display = 'none'
-        }
+    if (menuOpen == false) {
+        menuOpen = true
+        burger.style.display = 'block'
     }
     else {
         menuOpen = false
