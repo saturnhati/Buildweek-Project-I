@@ -573,7 +573,7 @@ h2 b {
 
 /* CONTACT-US SECTION */
 #contact-us {
-	padding: 2.5em 0;
+	padding: 6.5em 0 0;
 }
 #contact-us > *:not(#form__btn) {
 	margin-bottom: 1.5rem;
