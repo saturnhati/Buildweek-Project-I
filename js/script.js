@@ -63,26 +63,20 @@ document.addEventListener('scroll', function () {
         document.querySelector('#menu1'),
         document.querySelector('#newsletter1'),
         document.querySelector('#contacts1')]
-    let element = [
-        document.querySelector('header'),
-        document.querySelector('#about-us'),
-        document.querySelector('#blog'),
-        document.querySelector('#menu'),
-        document.querySelector('#newsletter'),
-        document.querySelector('#contact-us')]
+
     let pageHeight = window.innerHeight
-    let distanceFromTop0 = element[0].getBoundingClientRect().top
-    let distanceFromTop1 = element[1].getBoundingClientRect().top
-    let distanceFromTop2 = element[2].getBoundingClientRect().top
-    let distanceFromTop3 = element[3].getBoundingClientRect().top
-    let distanceFromTop4 = element[4].getBoundingClientRect().top
-    let distanceFromTop5 = element[5].getBoundingClientRect().top
-    let elementHeight0 = element[0].getBoundingClientRect().bottom - distanceFromTop0
-    let elementHeight1 = element[1].getBoundingClientRect().bottom - distanceFromTop1
-    let elementHeight2 = element[2].getBoundingClientRect().bottom - distanceFromTop2
-    let elementHeight3 = element[3].getBoundingClientRect().bottom - distanceFromTop3
-    let elementHeight4 = element[4].getBoundingClientRect().bottom - distanceFromTop4
-    let elementHeight5 = element[5].getBoundingClientRect().bottom - distanceFromTop5
+    let distanceFromTop0 = document.querySelector('header').getBoundingClientRect().top
+    let distanceFromTop1 = document.querySelector('#about-us').getBoundingClientRect().top
+    let distanceFromTop2 = document.querySelector('#blog').getBoundingClientRect().top
+    let distanceFromTop3 = document.querySelector('#menu').getBoundingClientRect().top
+    let distanceFromTop4 = document.querySelector('#newsletter').getBoundingClientRect().top
+    let distanceFromTop5 = document.querySelector('#contact-us').getBoundingClientRect().top
+    let elementHeight0 = document.querySelector('header').getBoundingClientRect().bottom - distanceFromTop0
+    let elementHeight1 = document.querySelector('#about-us').getBoundingClientRect().bottom - distanceFromTop1
+    let elementHeight2 = document.querySelector('#blog').getBoundingClientRect().bottom - distanceFromTop2
+    let elementHeight3 = document.querySelector('#menu').getBoundingClientRect().bottom - distanceFromTop3
+    let elementHeight4 = document.querySelector('#newsletter').getBoundingClientRect().bottom - distanceFromTop4
+    let elementHeight5 = document.querySelector('#contact-us').getBoundingClientRect().bottom - distanceFromTop5
     console.log(distanceFromTop0)
     // HOME BUTTON
     if (distanceFromTop0 == 0 || distanceFromTop0 > (elementHeight0 * -1)) {
@@ -93,6 +87,7 @@ document.addEventListener('scroll', function () {
     }
     // ABOUT US BUTTON
     if (distanceFromTop1 < (pageHeight / 2) && distanceFromTop1 > (elementHeight1 * -1)) {
+        navMenu[0].classList.remove('scroll_underline')
         navMenu[1].classList.add('scroll_underline')
     }
     else {
@@ -100,6 +95,7 @@ document.addEventListener('scroll', function () {
     }
     // BLOG BUTTON
     if (distanceFromTop2 < (pageHeight / 2) && distanceFromTop2 > (elementHeight2 * -1)) {
+        navMenu[1].classList.remove('scroll_underline')
         navMenu[2].classList.add('scroll_underline')
     }
     else {
@@ -107,6 +103,7 @@ document.addEventListener('scroll', function () {
     }
     // MENU BUTTON
     if (distanceFromTop3 < (pageHeight / 2) && distanceFromTop3 > (elementHeight3 * -1)) {
+        navMenu[2].classList.remove('scroll_underline')
         navMenu[3].classList.add('scroll_underline')
     }
     else {
@@ -114,6 +111,7 @@ document.addEventListener('scroll', function () {
     }
     // NEWS BUTTON
     if (distanceFromTop4 < (pageHeight / 2) && distanceFromTop4 > (elementHeight4 * -1)) {
+        navMenu[3].classList.remove('scroll_underline')
         navMenu[4].classList.add('scroll_underline')
     }
     else {
@@ -121,6 +119,7 @@ document.addEventListener('scroll', function () {
     }
     // CONTACTS BUTTON
     if (distanceFromTop5 < (pageHeight / 2) && distanceFromTop5 > (elementHeight5 * -1)) {
+        navMenu[4].classList.remove('scroll_underline')
         navMenu[5].classList.add('scroll_underline')
     }
     else {
