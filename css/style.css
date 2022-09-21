@@ -593,7 +593,7 @@ h2 b {
 	width: 100%;
 	margin: 0.5em 0;
 }
-#contact-us form input {
+#contact-us form > * {
 	width: 100%;
 	margin: 0.5em 0;
 	height: 48px;
