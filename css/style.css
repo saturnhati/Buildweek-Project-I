@@ -187,7 +187,7 @@ header::before {
 	max-width: 90%;
 	margin-inline: auto;
 }
-#horiz-line {
+.horiz-line {
 	width: 140px;
 	border-top: 1px solid #c8c1b3;
 	margin-inline: auto;
@@ -625,9 +625,9 @@ h2 b {
 
 /* CONTACT-US SECTION */
 #contact-us {
-	padding: 2.5em 0;
+	padding: 6.5em 0 0;
 }
-#contact-us > *:not(#form__btn) {
+#contact-us > *:not(#contact-us #form__btn) {
 	margin-bottom: 1.5rem;
 }
 #contact-us h2 {
@@ -636,16 +636,22 @@ h2 b {
 	max-width: 90%;
 	margin-inline: auto;
 	text-align: center;
+	margin-bottom: 3rem;
 }
+
+#contact-us .horiz-line {
+	margin-top: 3rem;
+}
+
 #contact-us p {
 	font-weight: 700;
-	font-size: 1.5rem;
+	font-size: 20px;
 }
 #contact-us form {
 	width: 100%;
 	margin: 0.5em 0;
 }
-#contact-us form input {
+#contact-us form > * {
 	width: 100%;
 	margin: 0.5em 0;
 	height: 48px;
