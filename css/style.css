@@ -559,6 +559,9 @@ h2 b {
 	height: 60px;
 	border-radius: 0px;
 }
+#input-mail:focus{
+	outline: none;
+}
 #tableofemail a {
 	text-decoration: none;
 	padding: 21px 40px 21px 40px;
