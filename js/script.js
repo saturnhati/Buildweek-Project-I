@@ -1,8 +1,3 @@
-//scroll of page
-
-
-
-
 // HEADER
 let menuOpen = false
 
