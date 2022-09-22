@@ -133,36 +133,6 @@ header::before {
 	background: #ff5333;
 }
 
-
-/* SLIDER */
-#featured-slider {
-	width: 80%;
-	margin: 4vh auto;
-}
-#containerofslider {
-	padding: 70px;
-}
-#titleofslider {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 2vh;
-}
-#titleofslider h2 {
-	font-size: 1.5rem;
-}
-#titleofslider span {
-	color: #ff4f02;
-}
-#scroll-row {
-	background-color: #fff;
-	color: #ff530a;
-	border: 0;
-	font-size: 1.5rem;
-}
-.slider {
-	text-align: center;
-	padding: 200px;
-}
 /* ABOUT-US SECTION */
 #about-us {
 	padding: 7em 0;

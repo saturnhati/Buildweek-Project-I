@@ -9,8 +9,7 @@
   <script src="https://kit.fontawesome.com/7b501ddc7c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./slyder/resourse/owl.carousel.min.css">
-  <link rel="stylesheet" href="./slyder/resourse/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./css/slider.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>U1-W4 | Build Week 1</title>
 </head>
@@ -45,22 +44,57 @@
 
   <!-- SLIDER -->
   <section id="featured-slider" data-aos="fade-up">
-    <div id="titleofslider">
-      <h2>FEATURED <span>WORKS</span></h2>
-    </div>
-    <div id="imagineofslider">
-      <div class="owl-carousel owl-theme">
-        <div class="item"><img src="./assets/images/slider/slider-img-1.jpg" alt="" srcset=""></div>
-        <div class="item"><img src="./assets/images/slider/slider-img-2.jpg" alt="" srcset=""></div>
-        <div class="item"><img src="./assets/images/slider/slider-img-3.jpg" alt="" srcset=""></div>
-        <div class="item"><img src="./assets/images/slider/slider-img-4.jpg" alt="" srcset=""></div>
-        <div class="item"><img src="./assets/images/slider/slider-img-1.jpg" alt="" srcset=""></div>
-        <div class="item"><img src="./assets/images/slider/slider-img-2.jpg" alt="" srcset=""></div>
-        <div class="item"><img src="./assets/images/slider/slider-img-3.jpg" alt="" srcset=""></div>
-        <div class="item"><img src="./assets/images/slider/slider-img-4.jpg" alt="" srcset=""></div>
+
+    <div class="container">
+      <h2 class="slider__text">FEATURED <span class="slider__text--orange">WORKS</span></h2>
+
+      <div class="carousel">
+
+        <div class="nav nav-right">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      
+              <div class="carousel-content">
+                
+                <div class="slide slide-1">
+                  <img src="./assets/images/slider/slider-img-1.jpg">
+                </div>
+                <div class="slide slide-2">
+                  <img src="./assets/images/slider/slider-img-2.jpg">
+                </div>
+                <div class="slide slide-3">
+                  <img src="./assets/images/slider/slider-img-3.jpg">
+                </div>
+                <div class="slide slide-4">
+                  <img src="./assets/images/slider/slider-img-4.jpg">
+                </div>
+                <div class="slide slide-5">
+                  <img src="./assets/images/slider/slider-img-1.jpg">
+                </div>
+                <div class="slide slide-6">
+                  <img src="./assets/images/slider/slider-img-2.jpg">
+                </div>
+                <div class="slide slide-7">
+                  <img src="./assets/images/slider/slider-img-3.jpg">
+                </div>
+                <div class="slide slide-8">
+                  <img src="./assets/images/slider/slider-img-4.jpg">
+                </div>
+              
+              </div>
+              <div class="circles">
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+              </div>
+
+              
+            </div>
+            
       </div>
-    </div>
+
   </section>
+
   <!-- ABOUT US -->
   <section id="about-us">
     <img src="./assets/images/cooker-img.png" data-aos="fade-up" alt="cooker-img" class="about-us__img" />
@@ -332,28 +366,6 @@
   </div>
 
   <!-- SCRIPT -->
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  <script src="./slyder/resourse/owl.carousel.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        responsive: {
-          0: {
-            items: 1
-          },
-          768: {
-            items: 3
-          },
-          1200: {
-            items: 4
-          }
-        }
-      })
-    });
-  </script>
   <script src="./js/script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>

@@ -1,14 +1,7 @@
-//scroll of page
-
-
-
-
 // HEADER
 let menuOpen = false
 
-// position fixed nav bar
-
-
+// HEADER - POSITION FIXED ON NAVBAR
 document.addEventListener('scroll', function () {
     let colla = document.querySelector('#colla')
     let top = window.pageYOffset
@@ -33,7 +26,7 @@ document.addEventListener('scroll', function () {
     }
 })
 
-// hamburger menu
+// HEADER - HAMBURGER MENU
 let width = window.innerWidth
 
 function burgerMenu() {
@@ -89,9 +82,9 @@ document.addEventListener('scroll', function () {
         navMenu[0].classList.remove('scroll_underline')
         navMenu[1].classList.add('scroll_underline')
     }
-    else {
-        navMenu[1].classList.remove('scroll_underline')
-    }
+    // else {
+    //     navMenu[1].classList.remove('scroll_underline')
+    // }
     // BLOG BUTTON
     if (distanceFromTop2 < (pageHeight / 2) && distanceFromTop2 > (elementHeight2 * -1)) {
         navMenu[1].classList.remove('scroll_underline')
@@ -126,4 +119,116 @@ document.addEventListener('scroll', function () {
     }
 })
 
+// SLIDER
+var carousel = document.querySelector('.carousel');
+var carouselContent = document.querySelector('.carousel-content');
+var slides = document.querySelectorAll('.slide');
+var arrayOfSlides = Array.prototype.slice.call(slides);
+var carouselDisplaying;
+var screenSize;
+setScreenSize();
+var lengthOfSlide;
 
+function addClone() {
+    var lastSlide = carouselContent.lastElementChild.cloneNode(true);
+    lastSlide.style.left = (-lengthOfSlide) + "px";
+    carouselContent.insertBefore(lastSlide, carouselContent.firstChild);
+}
+// addClone();
+
+function removeClone() {
+    var firstSlide = carouselContent.firstElementChild;
+    firstSlide.parentNode.removeChild(firstSlide);
+}
+
+function moveSlidesLeft() {
+    var slides = document.querySelectorAll('.slide');
+    var slidesArray = Array.prototype.slice.call(slides);
+    slidesArray = slidesArray.reverse();
+    var maxWidth = (slidesArray.length - 1) * lengthOfSlide;
+
+    slidesArray.forEach(function (el, i) {
+        maxWidth -= lengthOfSlide;
+        el.style.left = maxWidth + "px";
+    });
+}
+
+// Function to set displayed items based on screen resize
+window.addEventListener('resize', setScreenSize);
+function setScreenSize() {
+    if (window.innerWidth >= 500) {
+        carouselDisplaying = 3;
+    } else if (window.innerWidth >= 300) {
+        carouselDisplaying = 2;
+    } else {
+        carouselDisplaying = 1;
+    }
+    getScreenSize();
+}
+
+// Function for responsiveness of items
+function getScreenSize() {
+    var slides = document.querySelectorAll('.slide');
+    var slidesArray = Array.prototype.slice.call(slides);
+    lengthOfSlide = (carousel.offsetWidth / carouselDisplaying);
+    var initialWidth = -lengthOfSlide;
+    slidesArray.forEach(function (el) {
+        el.style.width = lengthOfSlide + "px";
+        el.style.left = initialWidth + "px";
+        initialWidth += lengthOfSlide;
+    });
+}
+
+// Nav button, when clicked it activates the moveLeft function
+var rightNav = document.querySelector('.nav-right');
+rightNav.addEventListener('click', moveLeft);
+
+var moving = true;
+
+function activateAgain() {
+    var firstSlide = carouselContent.firstElementChild;
+    moving = true;
+    firstSlide.removeEventListener('transitionend', activateAgain);
+}
+
+// Function to move to the left the slide items
+function moveLeft() {
+    if (moving) {
+        moving = false;
+        removeClone();
+        var firstSlide = carouselContent.firstElementChild;
+        firstSlide.addEventListener('transitionend', replaceToEnd);
+        moveSlidesLeft();
+    }
+}
+
+// Function to create infinite loop
+function replaceToEnd() {
+    var firstSlide = carouselContent.firstElementChild;
+    firstSlide.parentNode.removeChild(firstSlide);
+    carouselContent.appendChild(firstSlide);
+    firstSlide.style.left = ((arrayOfSlides.length - 1) * lengthOfSlide) + "px";
+    addClone();
+    moving = true;
+    firstSlide.removeEventListener('transitionend', replaceToEnd);
+}
+
+
+
+
+
+
+
+
+// CAROSELLO LIDIA
+const avantiPagina = function () {
+    const paginaCorrente = document.getElementsByClassName("active")[0] //pagina visibile al momento del click
+    paginaCorrente.classList.remove("active")
+    const numeroPagina = Number(paginaCorrente.id.split("-")[1])
+    const prossimaPagina = document.getElementById("pag-" + (numeroPagina + 1))
+    if (prossimaPagina == null) {
+        document.getElementById("pag-1").classList.add("active")
+    } else {
+        prossimaPagina.classList.add("active")
+    }
+}
