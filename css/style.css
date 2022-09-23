@@ -521,6 +521,12 @@ h2 b {
 
 #rupee {
 	height: 20px;
+	transition: 0.5s;
+	margin-right: 6px;
+}
+
+#rupee:hover{
+	transform: scale(1.5) rotate(15deg);
 }
 
 #zeldaLogo {
