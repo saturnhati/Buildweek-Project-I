@@ -225,7 +225,6 @@ header::before {
 	text-transform: capitalize;
 }
 .box-img {
-	background-color: #fff;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 0;
@@ -235,8 +234,11 @@ header::before {
 #blog .box h3 {
 	font-size: 1.25rem;
 	font-weight: bold;
+	margin-top: 12px;
 }
 .box {
+	background-color: white;
+	height: 100%;
 	text-align: center;
 	padding: 1rem 2rem;
 }
