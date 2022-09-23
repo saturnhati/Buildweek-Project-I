@@ -53,11 +53,15 @@
     text-align: center;
 }
 
-.circles i {
+
+.fa-circle {
     color: #DADADA;
     font-size: 0.7rem;
 }
 
+.circles--orange {
+    color: orange;
+}
 
 @media screen and (min-width: 768px){
     .carousel {

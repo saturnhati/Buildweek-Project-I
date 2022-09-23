@@ -129,18 +129,20 @@ var screenSize;
 setScreenSize();
 var lengthOfSlide;
 
+// Clones the last slide and puts it as first slide
 function addClone() {
     var lastSlide = carouselContent.lastElementChild.cloneNode(true);
     lastSlide.style.left = (-lengthOfSlide) + "px";
     carouselContent.insertBefore(lastSlide, carouselContent.firstChild);
 }
-// addClone();
 
+// Removes the first slide's clone
 function removeClone() {
     var firstSlide = carouselContent.firstElementChild;
     firstSlide.parentNode.removeChild(firstSlide);
 }
 
+// Moves all the slides to the left
 function moveSlidesLeft() {
     var slides = document.querySelectorAll('.slide');
     var slidesArray = Array.prototype.slice.call(slides);
@@ -191,6 +193,23 @@ function activateAgain() {
     firstSlide.removeEventListener('transitionend', activateAgain);
 }
 
+// Colors the circles
+let circles = [document.getElementById('circle0'), document.getElementById('circle1')];
+let circle0 = true
+function colorCircles() {
+    if (circle0 == true) {
+        circles[0].classList.remove('circles--orange');
+        circle0 = false
+        circles[1].classList.add('circles--orange');
+    }
+    else {
+        circles[1].classList.remove('circles--orange');
+        circle0 = true
+        circles[0].classList.add('circles--orange');
+    }
+}
+
+
 // Function to move to the left the slide items
 function moveLeft() {
     if (moving) {
@@ -211,24 +230,4 @@ function replaceToEnd() {
     addClone();
     moving = true;
     firstSlide.removeEventListener('transitionend', replaceToEnd);
-}
-
-
-
-
-
-
-
-
-// CAROSELLO LIDIA
-const avantiPagina = function () {
-    const paginaCorrente = document.getElementsByClassName("active")[0] //pagina visibile al momento del click
-    paginaCorrente.classList.remove("active")
-    const numeroPagina = Number(paginaCorrente.id.split("-")[1])
-    const prossimaPagina = document.getElementById("pag-" + (numeroPagina + 1))
-    if (prossimaPagina == null) {
-        document.getElementById("pag-1").classList.add("active")
-    } else {
-        prossimaPagina.classList.add("active")
-    }
 }
